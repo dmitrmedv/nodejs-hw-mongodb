@@ -13,6 +13,8 @@ const PORT = Number(process.env.PORT) || 3000;
 export const setupServer = () => {
   const app = express();
 
+  app.use(express.json());
+
   app.use(
     pino({
       transport: {
@@ -20,8 +22,6 @@ export const setupServer = () => {
       },
     }),
   );
-
-  app.use(express.json());
 
   app.use(cors());
 
