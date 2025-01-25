@@ -26,7 +26,7 @@ export const setupServer = () => {
   app.use(cors());
 
   app.use(studentRouter);
-
+  
   app.use('*', notFoundHandler);
 
   app.use(errorHandler);
