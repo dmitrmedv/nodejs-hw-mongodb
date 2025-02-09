@@ -1,13 +1,11 @@
 import express from 'express';
 import pino from 'pino-http';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import 'dotenv/config';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
 import router from './routers/index.js';
 import cookieParser from 'cookie-parser';
-
-dotenv.config();
 
 const PORT = Number(process.env.PORT) || 3000;
 
