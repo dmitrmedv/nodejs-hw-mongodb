@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { validateBody } from '../middlewares/validateBody.js';
 import { ctrlWrapper } from '../utils/ctrlWrapper.js';
 import {
+  getGoogleOAuthUrlController,
   loginUserController,
   logoutUserController,
   refreshUserSessionController,
@@ -45,5 +46,7 @@ router.post(
   validateBody(resetPasswordSchema),
   ctrlWrapper(resetPasswordController),
 );
+
+router.get('/get-oauth-url', ctrlWrapper(getGoogleOAuthUrlController));
 
 export default router;
