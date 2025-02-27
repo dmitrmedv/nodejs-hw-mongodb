@@ -31,13 +31,15 @@ parameters:
   - in: query
     name: filter
     schema:
-      type: string
+      type: object
       properties:
-        type:
+        contactType:
+          description: "Contact's type"
           type: string
           enum: ['work', 'home', 'personal']
           example: 'work'
         isFavourite:
+          description: 'Is Favourite'
           type: boolean
           example: true
 responses:
