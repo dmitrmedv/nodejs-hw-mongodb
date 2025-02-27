@@ -77,26 +77,23 @@
           },
           {
             "in": "query",
-            "name": "filter",
+            "name": "ContactsType",
             "schema": {
-              "type": "object",
-              "properties": {
-                "contactType": {
-                  "description": "Contact's type",
-                  "type": "string",
-                  "enum": [
-                    "work",
-                    "home",
-                    "personal"
-                  ],
-                  "example": "work"
-                },
-                "isFavourite": {
-                  "description": "Is Favourite",
-                  "type": "boolean",
-                  "example": true
-                }
-              }
+              "type": "string",
+              "enum": [
+                "work",
+                "home",
+                "personal"
+              ],
+              "example": "work"
+            }
+          },
+          {
+            "in": "query",
+            "name": "isFavourite",
+            "schema": {
+              "type": "boolean",
+              "example": true
             }
           }
         ],
