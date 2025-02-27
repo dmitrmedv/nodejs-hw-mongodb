@@ -31,7 +31,7 @@ parameters:
   - in: query
     name: filter
     schema:
-      type: object
+      type: string
       properties:
         type:
           type: string
@@ -40,12 +40,6 @@ parameters:
         isFavourite:
           type: boolean
           example: true
-        name:
-          type: string
-          example: 'John Doe'
-        email:
-          type: string
-          example: 'john.doe@example.com'
 responses:
   '200':
     description: Successfully retrieved contacts!
