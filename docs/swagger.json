@@ -81,7 +81,8 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": {
+                "contactType": {
+                  "description": "Contact's type",
                   "type": "string",
                   "enum": [
                     "work",
@@ -91,16 +92,9 @@
                   "example": "work"
                 },
                 "isFavourite": {
+                  "description": "Is Favourite",
                   "type": "boolean",
                   "example": true
-                },
-                "name": {
-                  "type": "string",
-                  "example": "John Doe"
-                },
-                "email": {
-                  "type": "string",
-                  "example": "john.doe@example.com"
                 }
               }
             }
